@@ -1,5 +1,5 @@
 import React from "react"
-export default function Item( {product}) {
+export default function Item({ product }) {
     return (
         <div className="item">
             <img src={product.image} width={150} alt="" />

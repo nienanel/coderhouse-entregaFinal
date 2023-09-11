@@ -27,7 +27,7 @@ nav ul {
 }
 
 .brand {
-    font-size: 2rem;
     font-weight: bold;
+    transform: translate(0, 20%);
 }
 

@@ -6,7 +6,7 @@
             "price": 399.99,
             "description": "Un esquí versátil adecuado para todo tipo de terrenos y condiciones.",
             "image": "https://i1.adis.ws/s/k2/k2_2223_disruption-78ti_S2206005?w=340&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "price": 449.99,
             "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
             "image": "https://i1.adis.ws/i/k2/k2_2223_reckoner-102_S2203015_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "price": 449.99,
             "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
             "image": "https://i1.adis.ws/i/k2/k2_2223_mindbender-108ti_S2203030_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "price": 449.99,
             "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
             "image": "https://i1.adis.ws/i/k2/k2_2223_sight_S2203018_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "price": 449.99,
             "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
             "image": "https://i1.adis.ws/i/k2/k2_2223_mindbender-85-w_S2203035_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
         },
         {
             "id": 6,
@@ -46,6 +46,38 @@
             "price": 449.99,
             "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
             "image": "https://i1.adis.ws/i/k2/k2_2223_reckoner-112_brain-dead_S2203109011_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
-            "category": "skis-AllMountain"
+            "category": "Mountain"
+        },
+        {
+            "id": 7,
+            "name": "RC4 WORLDCUP CT",
+            "price": 352.99,
+            "description": "The best for the best. Awesome capabilities straight from the Fischer race department for both powerful or tight turns. The RC4 offers world class precision and agility",
+            "image": "https://www.fischersports.com/media/image/5f/01/69/a06823_rc4_worldcup_ct_01.jpg",
+            "category": "Race"
+        },
+        {
+            "id": 8,
+            "name": "RC4 WORLDCUP SC PRO",
+            "price":450.99,
+            "description": "The RC4 The Curv is a top level ski for top skiers. It combines the performance of an all-out racing ski with the versatility of an all-arounder to guarantee the ultimate in turning enjoyment as well as straight-up fun from the first turn through to the last.",
+            "image": "https://www.fischersports.com/media/image/a0/e1/22/a08023_the_curv_01.jpg",
+            "category": "Race"
+        },
+        {
+            "id": 9,
+            "name": "THE CURV",
+            "price":290.99,
+            "description": "New shovel construction of the RC4 Worldcup SC offers greater stiffness for faster, more dynamic, razor sharp turns",
+            "image": "https://www.fischersports.com/media/image/11/d0/05/a15623_rc4_worldcup_sc_01.jpg",
+            "category": "Race"
+        },
+        {
+            "id": 10,
+            "name": "RC4 POWER",
+            "price":390.99,
+            "description": "Multi-discipline ski for big or tight turns for the most demanding skiers. The shovel shape and construction and excellent edge grip of the RC4 Power allow smooth, mid-size radius turns.",
+            "image": "https://www.fischersports.com/media/image/f7/31/29/a15823_rc4_power_01.jpg",
+            "category": "Race"
         }
 ]
