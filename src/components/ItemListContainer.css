@@ -1,0 +1,40 @@
+.ItemList-Container {
+    display: grid;
+    justify-content: space-around;
+    color: white;
+    background-color: #F1ED0E;
+    align-items: baseline;
+
+}
+
+.ItemList {
+    background-color: black;
+
+}
+
+.ItemList ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.ItemList li {
+    margin: 5rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: #F1ED0E 1px solid;
+    width: 8rem;
+}

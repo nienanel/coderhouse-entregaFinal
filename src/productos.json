@@ -1,0 +1,51 @@
+[
+    
+        {
+            "id": 1,
+            "name": "K2 DISRUPTION 78TI MEN'S SKIS 2023",
+            "price": 399.99,
+            "description": "Un esquí versátil adecuado para todo tipo de terrenos y condiciones.",
+            "image": "https://i1.adis.ws/s/k2/k2_2223_disruption-78ti_S2206005?w=340&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        },
+        {
+            "id": 2,
+            "name": "K2 RECKONER 102 MEN'S SKIS 2023",
+            "price": 449.99,
+            "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
+            "image": "https://i1.adis.ws/i/k2/k2_2223_reckoner-102_S2203015_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        },
+        {
+            "id": 3,
+            "name": "K2 MINDBENDER 108TI MEN'S SKIS 2023",
+            "price": 449.99,
+            "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
+            "image": "https://i1.adis.ws/i/k2/k2_2223_mindbender-108ti_S2203030_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        },
+        {
+            "id": 4,
+            "name": "K2 SIGHT MEN'S SKIS 2023",
+            "price": 449.99,
+            "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
+            "image": "https://i1.adis.ws/i/k2/k2_2223_sight_S2203018_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        },
+        {
+            "id": 5,
+            "name": "K2 MINDBENDER 85 WOMEN'S SKIS 2023",
+            "price": 449.99,
+            "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
+            "image": "https://i1.adis.ws/i/k2/k2_2223_mindbender-85-w_S2203035_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        },
+        {
+            "id": 6,
+            "name": "K2 X BRAIN DEAD RECKONER 112 MEN'S SKIS 2023",
+            "price": 449.99,
+            "description": "Un esquí diseñado para realizar acrobacias y saltos en el parque de nieve.",
+            "image": "https://i1.adis.ws/i/k2/k2_2223_reckoner-112_brain-dead_S2203109011_1?w=412&fmt=webp&fmt.interlaced=true&bg=white&dpi=96",
+            "category": "skis-AllMountain"
+        }
+]
