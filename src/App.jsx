@@ -19,8 +19,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route  exact path='/skiCategory/Mountain' element={<ItemListContainer />} />
-        <Route exact path='/skiCategory/Race' element={<ItemListContainer />} />
+        <Route path='/skiCategory/Mountain' element={<ItemListContainer />} />
+        <Route path='/skiCategory/Race' element={<ItemListContainer />} />
         <Route path='/ContactUs' element={<ContactUs />} />
         <Route path='/CartWidget' element={<CartWidget />} />
       </Routes>

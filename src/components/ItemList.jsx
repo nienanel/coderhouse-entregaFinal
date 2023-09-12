@@ -4,38 +4,29 @@ import Item from "./Item";
 import ItemCount from './ItemCount';
 import { useParams } from 'react-router-dom';
 
-function getProducts(category) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-
-            if (category != undefined) {
-                const filteredProducts = productos.filter((product) => product.category === category);
-                resolve(filteredProducts);
-                console.log(filteredProducts);
-            }
-            else {
-                resolve(productos);
-
-            }
-        }, 2000);
-    });
-}
-
 export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const { category } = useParams();
 
     useEffect(() => {
-        getProducts(category).then((esquies) => {
-            console.log(esquies);
-            setProducts(esquies);
-            setLoading(false);
-        });
-    }, []);
+        setLoading(true);
+        setTimeout(() => {
+            let filteredProducts;
+
+            if (category) {
+                filteredProducts = productos.filter((product) => product.category === category);
+            } else {
+                filteredProducts = productos;
+            }
+
+            setProducts(filteredProducts);
+            setLoading(false); 
+        }, 2000); 
+    }, [category]);
 
     if (loading) {
-        return <p>cargando....</p>
+        return <p>cargando....</p>;
     }
 
     return (
@@ -43,13 +34,12 @@ export default function ItemListContainer() {
             {products.map((product) => {
                 return <ul key={product.id}>
                     <li>
-                        <Item key={product.id} product={product} />
+                        <Item product={product} />
                         <ItemCount className="contador" />
                     </li>
                 </ul>
             })}
         </div>
     )
-
 }
 
