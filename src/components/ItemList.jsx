@@ -21,8 +21,8 @@ export default function ItemListContainer() {
             }
 
             setProducts(filteredProducts);
-            setLoading(false); 
-        }, 2000); 
+            setLoading(false);
+        }, 2000);
     }, [category]);
 
     if (loading) {

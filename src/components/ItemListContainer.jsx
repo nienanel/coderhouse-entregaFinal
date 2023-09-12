@@ -1,6 +1,8 @@
 import "./ItemListContainer.css";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 export default function ItemListContainer() {
+    const {category} = useParams();
     const getCategoryTitle = () => {
         switch (category) {
             case 'Mountain':
@@ -14,7 +16,7 @@ export default function ItemListContainer() {
 
     return (
         <div className="ItemList-Container">
-            <h1 style={{ color: "red", textAlign: "center" }}>{getCategoryTitle}</h1>
+            <h1 style={{ color: "red", textAlign: "center" }}>{getCategoryTitle()}</h1>
             <ItemList />
         </div>
     );

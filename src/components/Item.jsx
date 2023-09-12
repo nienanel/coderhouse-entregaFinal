@@ -4,7 +4,7 @@ export default function Item({ product }) {
         <div className="item">
             <img src={product.image} width={150} alt="" />
             <h2>{product.name}</h2>
-            <p>{product.price}</p>
+            <p>Precio: ${product.price}</p>
         </div>
     )
 }
