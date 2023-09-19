@@ -24,6 +24,7 @@ nav ul {
 .nav li:hover {
     background-color: #F1ED0E;
     color: black;
+    border-radius: 5px;
 }
 
 .brand {

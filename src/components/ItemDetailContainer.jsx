@@ -11,11 +11,11 @@ export default function ItemDetailContainer() {
     useEffect(() => {
         const selectedId = parseInt(id);
         const selectedItem = productos.find((item) => item.id === selectedId);
-        
+
         setItem(selectedItem);
         console.log(selectedItem)
         console.log("ID from URL:", id);
-console.log("IDs in productos.json:", productos.map((item) => item.id));
+        console.log("IDs in productos.json:", productos.map((item) => item.id));
     }, [id]);
 
     return (
