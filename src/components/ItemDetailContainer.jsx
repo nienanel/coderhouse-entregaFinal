@@ -1,30 +1,45 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import productos from "../productos.json";
-import ItemDetail from "./ItemDetail";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import BuyButton from './Cart/BuyButton';
 
-export default function ItemDetailContainer() {
-
+function ItemDetailContainer() {
     const { id } = useParams();
-    const [item, setItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState({});
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const selectedId = parseInt(id);
-        const selectedItem = productos.find((item) => item.id === selectedId);
+        setLoading(true);
 
-        setItem(selectedItem);
-        console.log(selectedItem)
-        console.log("ID from URL:", id);
-        console.log("IDs in productos.json:", productos.map((item) => item.id));
+        // Simular una llamada a una API
+        fetch(`/api/products/${id}`)
+            .then((response) => response.json())
+            .then((data) => {
+                if (data) {
+                    setSelectedItem(data);
+                } else {
+                    console.error(`No se encontró el producto con el id ${id}`);
+                }
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error al cargar el producto:', error);
+                setLoading(false);
+            });
     }, [id]);
 
     return (
         <div className="itemDetailContainer">
-            {item ? (
-                <ItemDetail item={item} />
+            {loading ? (
+                <h2>Cargando...</h2>
             ) : (
-                <h1>Producto no encontrado</h1>
+                <React.Fragment>
+                    <ItemDetail item={selectedItem} />
+                    <BuyButton product={selectedItem} />
+                </React.Fragment>
             )}
         </div>
-    )
+    );
 }
+
+export default ItemDetailContainer;

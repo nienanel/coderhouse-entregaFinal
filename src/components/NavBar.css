@@ -10,6 +10,7 @@
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 .nav a  {
@@ -28,7 +29,9 @@ nav ul {
 }
 
 .brand {
-    font-weight: bold;
-    transform: translate(0, 20%);
+    transform: translate(0, 25%);
 }
 
+.singin {
+    color: #F1ED0E;
+}

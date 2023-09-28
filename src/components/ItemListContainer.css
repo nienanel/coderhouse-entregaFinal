@@ -1,16 +1,16 @@
 .ItemList-Container {
     display: grid;
     justify-content: space-around;
-    color: white;
-    background-color: #F1ED0E;
+    color: #F1ED0E;
+    /* background-color: #F1ED0E; */
     align-items: baseline;
 
 }
 
-.ItemList {
+/* .ItemList {
     background-color: black;
 
-}
+} */
 
 .ItemList ul {
     list-style: none;

@@ -1,5 +1,5 @@
 [
-    
+    "productos", [
         {
             "id": 1,
             "name": "K2 DISRUPTION 78TI MEN'S SKIS 2023",
@@ -80,4 +80,4 @@
             "image": "https://www.fischersports.com/media/image/f7/31/29/a15823_rc4_power_01.jpg",
             "category": "Race"
         }
-]
+]]
