@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "./Cart/CartWidget";
 import logo from "../assets/logo.png";
-import SingIn from "./SignIn";
+import SignIn from "./SignIn";
 
 const NavBar = () => {
     return (
         <nav className="nav">
-            <Link to="/" className="brand"><img src={logo} width={55} alt="logo" /></Link>
+            <NavLink to="/" className="brand"><img src={logo} width={55} alt="logo" /></NavLink>
             <ul>
-                <li><Link to="/skiCategory/Mountain">Mountain</Link></li>
-                <li><Link to="/skiCategory/Race">Race</Link></li>
-                <li><Link to="/ContactUs">Contact Us</Link></li>
+                <li><NavLink to="/skiCategory/mountain">Mountain</NavLink></li>
+                <li><NavLink  to="/skiCategory/race">Race</NavLink ></li>
+                <li><NavLink to="/ContactUs">Contact Us</NavLink></li>
             </ul>
             <ul>
             <li><SignIn Link to="/SingIn" /></li>

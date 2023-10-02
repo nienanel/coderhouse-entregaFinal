@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from "firebase/firestore"; // Make sure to import Firestore functions
+
 import ItemDetail from './ItemDetail';
 import BuyButton from './Cart/BuyButton';
 
@@ -11,22 +13,23 @@ function ItemDetailContainer() {
     useEffect(() => {
         setLoading(true);
 
-        // Simular una llamada a una API
-        fetch(`/api/products/${id}`)
-            .then((response) => response.json())
-            .then((data) => {
-                if (data) {
-                    setSelectedItem(data);
-                } else {
-                    console.error(`No se encontró el producto con el id ${id}`);
+        const db = getFirestore();
+
+        const itemRef = doc(db, "productos", id);
+
+        getDoc(itemRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    setSelectedItem({ id: snapshot.id, ...snapshot.data() });
                 }
-                setLoading(false);
             })
             .catch((error) => {
-                console.error('Error al cargar el producto:', error);
-                setLoading(false);
+                console.error("Error fetching document:", error);
+            })
+            .finally(() => {
+                setLoading(false); 
             });
-    }, [id]);
+    }, [id]); 
 
     return (
         <div className="itemDetailContainer">

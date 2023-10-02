@@ -1,7 +1,8 @@
 import './App.css'
 import "./components/Navbar.css"
 import NavBar from "./components/Navbar"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom" // Importa BrowserRouter y úsalo como alias
+import {  Routes, Route } from "react-router-dom" 
+import { DataFetchingComponent } from './DataFetchingComponent'
 
 // Importa tus componentes
 import ContactUs from "./pages/ContactUs";
@@ -13,21 +14,22 @@ import CartContainer from "./components/Cart/CartContainer";
 
 function App() {
   return (
-    <>
-      <Router> 
-        <CartProvider>
+    
+    <DataFetchingComponent>
+    <div className='app'>
+      
           <NavBar />
           <Routes>
             <Route exact path="/" element={<ItemListContainer />} />
-            <Route path='/skiCategory/:category' element={<ItemListContainer />} />
+            <Route path='/skicategory/:category' element={<ItemListContainer />} />
             <Route path='/items/:id' element={<ItemDetailContainer />} />
             <Route path='/ContactUs' element={<ContactUs />} />
-            <Route path='/SingIn' element={<SingIn />} />
+            <Route path='/Signin' element={<SingIn />} />
             <Route path='/CartWidget' element={<CartContainer />} />
           </Routes>
-        </CartProvider>
-      </Router>
-    </>
+        
+    </div>
+    </DataFetchingComponent>
   )
 }
 
