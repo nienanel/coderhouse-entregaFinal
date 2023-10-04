@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDataContext } from '../DataFetchingComponent';
 import ItemList from './ItemList';
+import "./itemListContainer.css"
 
 function ItemListContainer() {
     const { data, loading } = useDataContext();
@@ -18,7 +19,7 @@ function ItemListContainer() {
         : productos;
 
     return (
-        <div>
+        <div className='itemListContainer'>
             <h2>Product List</h2>
             <ItemList productos={filteredProducts} />
 

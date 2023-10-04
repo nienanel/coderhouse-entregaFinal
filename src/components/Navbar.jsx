@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CartWidget from "./Cart/CartWidget";
 import logo from "../assets/logo.png";
-import SignIn from "./SignIn";
+import SignIn from "../components/RegisterUser/RegistrationIcon";
 
 const NavBar = () => {
     return (
@@ -15,7 +15,7 @@ const NavBar = () => {
             </ul>
             <ul>
             <li><SignIn Link to="/SingIn" /></li>
-            <li><CartWidget Link to="/CartWidget" /></li>
+            <li><CartWidget Link to="/Cart" /></li>
             </ul>
             
         </nav>

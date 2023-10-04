@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, getDocs, collection, query, where } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
 
 const DataContext = React.createContext();
@@ -12,30 +12,20 @@ function DataFetchingComponent({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                if (!category) {
-                    setLoading(false)
-                    console.log("No category")
-                    return;
-                }
-
                 const db = getFirestore();
-                const productsCollection = doc(db, 'productos');
-                const querysnapshot = await getDoc(productsCollection);
+                const productsCollection = category ? query(collection(db, "productos"),
+                    where("category", "==", category)) : collection(db, "productos");
+                const res = await getDocs(productsCollection)
 
-                // Imprimir los datos de Firestore en la consola
-                console.log("Datos de Firestore:", querysnapshot.data());
-
-                const productsData = querysnapshot.data();
-
-                //filtro por categoria
-                const filteredProducts = category
-                    ? productsData.filter(product => product.category === category)
-                    : productsData;
-
-                setData({ productos: filteredProducts });
-
+                const list = res.docs.map((product) => {
+                    return {
+                        id: product.id,
+                        ...product.data()
+                    }
+                })
+                setData({ productos: list })
             } catch (error) {
-                console.error('Error fetching Firestore data:', error);
+                console.log("error fetchin firestore data");
             } finally {
                 setLoading(false);
             }
@@ -43,6 +33,7 @@ function DataFetchingComponent({ children }) {
 
         fetchData();
     }, [category]);
+    console.log(data)
 
     return (
         <DataContext.Provider value={{ data, loading }}>

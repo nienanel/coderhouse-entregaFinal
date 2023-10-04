@@ -1,17 +1,18 @@
 import React from 'react';
 import { useCart } from './CartContext';
+import "../ItemListContainer.css"
 
-export default function BuyButton({ product }) {
+export default function BuyButton({ item }) {
     const { addToCart, removeFromCart, clearCart } = useCart();
 
     return (
-        <div>
-            <button onClick={() => addToCart(product, 1)}>Buy</button>
-            <button onClick={() => removeFromCart(product.id)}>Remove Item</button>
-            {product.quantity > 1 && (
-                <button onClick={() => removeFromCart(product.id, 1)}>Remove</button>
+        <div className='buttons'>
+            <button onClick={() => addToCart(item, 1)}>Buy</button>
+            <button onClick={() => removeFromCart(item.id)}>Remove Item</button>
+            {item.quantity > 1 && (
+                <button onClick={() => removeFromCart(item.id, 1)}>Remove</button>
             )}
-            {product.quantity === 1 && <button onClick={clearCart}>Clear Cart</button>}
+            {item.quantity === 1 && <button onClick={clearCart}>Clear Cart</button>}
         </div>
     );
 }

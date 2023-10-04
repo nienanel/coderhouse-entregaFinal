@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./ItemListContainer.css";
 
-function ItemDetail({ selectedItem }) {
+function ItemDetail({ item}) {
     return (
         <div className="itemDetail">
-            <img src={selectedItem.image} width={150} alt="" />
-            <h2>{selectedItem.name}</h2>
-            <p>Precio: ${selectedItem.price}</p>
-            <p>{selectedItem.description}</p>
+            <h2>{item.name}</h2>
+            <img src={item.image} alt={item.name} />
+            <h3>Precio: ${item.price}</h3>
+            <p>Descripción: {item.description}</p>
         </div>
-    );
+    )
 }
 
 export default ItemDetail;
