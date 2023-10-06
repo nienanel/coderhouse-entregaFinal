@@ -67,8 +67,13 @@ export function CartProvider({ children }) {
     }
     };
 
+    /*actualizar cantidades del carrito */
+    const updateCart = (updatedCart) => {
+        setCart(updatedCart);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, updateCart }}>
             {children}
         </CartContext.Provider>
     );

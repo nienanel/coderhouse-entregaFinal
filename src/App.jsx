@@ -1,36 +1,37 @@
-import './App.css'
-import "./components/Navbar.css"
-
-import {  Routes, Route } from "react-router-dom" 
-import { render } from 'react-dom'
-
-import NavBar from "./components/Navbar"
-import { DataFetchingComponent } from './DataFetchingComponent'
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import { AuthProvider } from './components/RegisterUser/AuthContext';
+import { CartProvider } from "./components/Cart/CartContext";
+import DataFetchingComponent from './DataFetchingComponent';
+import NavBar from "./components/Navbar";
 import ContactUs from "./pages/ContactUs";
-import SingIn from "./pages/SignIn";
+import SignIn from "./pages/SignIn";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from './components/ItemDetailContainer';
-import { CartProvider } from "./components/Cart/CartContext";
 import CartContainer from "./components/Cart/CartContainer";
+import CheckOutPage from './pages/CheckOutPage';
+
 
 function App() {
   return (
-    <DataFetchingComponent>
-    <CartProvider>
-    <div className='app'>
-          <NavBar />
-          <Routes>
-            <Route exact path="/" element={<ItemListContainer />} />
-            <Route path='/skicategory/:category' element={<ItemListContainer />} />
-            <Route path='/items/:id' element={<ItemDetailContainer />} />
-            <Route path='/ContactUs' element={<ContactUs />} />
-            <Route path='/Signin' element={<SingIn />} />
-            <Route path='/Cart' element={<CartContainer />} />
-          </Routes>
-        
-    </div>
-    </CartProvider>
-    </DataFetchingComponent>
+    <AuthProvider >
+      <DataFetchingComponent>
+        <CartProvider>
+          <div className='app'>
+            <NavBar />
+            <Routes>
+              <Route exact path="/" element={<ItemListContainer />} />
+              <Route path='/skicategory/:category' element={<ItemListContainer />} />
+              <Route path='/items/:id' element={<ItemDetailContainer />} />
+              <Route path='/ContactUs' element={<ContactUs />} />
+              <Route path='/Signin' element={<SignIn />} />
+              <Route path='/Cart' element={<CartContainer />} />
+              <Route path="/checkout" element={<CheckOutPage />} />
+            </Routes>
+          </div>
+        </CartProvider>
+      </DataFetchingComponent>
+    </AuthProvider>
   )
 }
 

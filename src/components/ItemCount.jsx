@@ -1,21 +1,27 @@
-import { useState } from "react";
-export default function ItemCount() {
+import React, { useState } from "react";
+export default function ItemCount({ initialCount, onCountChange }) {
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(initialCount);
 
-    function onAdd() {
-        setCount((prevCount) => (prevCount < 5 ? prevCount + 1 : prevCount));
-    }
+    const handleAdd = () => {
+        if (count < 5) {
+            setCount(count + 1);
+            onCountChange(count + 1);
+        }
+    };
 
-    function onSubstract() {
-        setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : prevCount));
-    }
+    const handleSubtract = () => {
+        if (count > 0) {
+            setCount(count - 1);
+            onCountChange(count - 1);
+        }
+    };
 
     return (
         <div className="contador">
-            <button onClick={onAdd}> + </button>
+            <button onClick={handleAdd}> + </button>
             <p>{count}</p>
-            <button onClick={onSubstract}> - </button>
+            <button onClick={handleSubtract}> - </button>
         </div>
     )
 }

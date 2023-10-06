@@ -8,7 +8,7 @@ export default function BuyButton({ item }) {
     return (
         <div className='buttons'>
             <button onClick={() => addToCart(item, 1)}>Buy</button>
-            <button onClick={() => removeFromCart(item.id)}>Remove Item</button>
+            <button onClick={() => removeFromCart(item.id, -item.quantity)}>Remove Item</button>
             {item.quantity > 1 && (
                 <button onClick={() => removeFromCart(item.id, 1)}>Remove</button>
             )}

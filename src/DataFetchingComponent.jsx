@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { getFirestore, doc, getDoc, getDocs, collection, query, where } from 'firebase/firestore';
+import { getFirestore, doc, getDocs, collection, query, where } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
 
 const DataContext = React.createContext();
