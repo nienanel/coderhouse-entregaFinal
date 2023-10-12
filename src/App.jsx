@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { AuthProvider } from './components/RegisterUser/AuthContext';
 import { CartProvider } from "./components/Cart/CartContext";
-import DataFetchingComponent from './DataFetchingComponent';
+import {DataFetchingComponent, useDataContext} from './DataFetchingComponent';
 import NavBar from "./components/Navbar";
 import ContactUs from "./pages/ContactUs";
 import SignIn from "./pages/SignIn";
@@ -12,9 +11,8 @@ import CartContainer from "./components/Cart/CartContainer";
 import CheckOutPage from './pages/CheckOutPage';
 
 
-function App() {
+export default function App() {
   return (
-    <AuthProvider >
       <DataFetchingComponent>
         <CartProvider>
           <div className='app'>
@@ -31,9 +29,8 @@ function App() {
           </div>
         </CartProvider>
       </DataFetchingComponent>
-    </AuthProvider>
   )
 }
 
-export default App
+
 
