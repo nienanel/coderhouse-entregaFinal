@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import CartWidget from "./Cart/CartWidget";
 import logo from "../assets/logo.png";
 import SignIn from "../components/RegisterUser/RegistrationIcon";
+import "./NavBar.css";
 
 const NavBar = () => {
     return (
