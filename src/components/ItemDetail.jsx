@@ -1,8 +1,8 @@
 import React from "react";
 import "./ItemListContainer.css";
 
-function ItemDetail({ item}) {
-    console.log(item)
+function ItemDetail({ item }) {
+
     return (
         <div className="itemDetail">
             <h2>{item.name}</h2>
@@ -10,7 +10,7 @@ function ItemDetail({ item}) {
             <h3>Precio: ${item.price}</h3>
             <h4>Descripción: {item.description || item.desciption}</h4>
         </div>
-        
+
     )
 }
 

@@ -10,8 +10,6 @@ h2 {
     color: #333;
 }
 
-/* itemList.css */
-
 .ItemList {
     display: flex;
     flex-wrap: wrap;
@@ -66,12 +64,14 @@ h2 {
 }
 
 .itemDetailContainer {
-    border: 2px, solid, #fbc02d;
     background-color: #ffb300;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5rem;
+
 }
 
 .buttons {
@@ -99,7 +99,6 @@ h2 {
     border: 1px solid #ffb300;
 }
 
-/* Estilos específicos para el botón "Clear Cart" */
 .buttons button:last-child {
     background-color: #ff5722;
     border: 1px solid #ff5722;
@@ -112,7 +111,7 @@ h2 {
 
 .itemDetail h4 {
     color: #333;
-    
+
 }
 
 .itemDetail {
@@ -124,4 +123,21 @@ h2 {
     margin: 0 auto;
     width: 80%;
     height: 100%;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    background-color: #333;
+    color: #ddd;
+}
+
+.counter p {
+    color: white;
 }

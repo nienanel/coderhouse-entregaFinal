@@ -1,11 +1,9 @@
 import React from "react";
-
-
 export default function SignIn() {
 
     return (
         <>
-           <h1>registation</h1>
+            <h1>registation</h1>
         </>
     );
 }

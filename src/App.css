@@ -7,3 +7,39 @@ body {
 
 }
 
+/*** pages ****/
+.checkOut {
+  background-color: #ffb300;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.checkOutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+}
+
+.detail h2 {
+  color: white;
+}
+
+.checkOutContainer button {
+  background-color: #ffb300;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}

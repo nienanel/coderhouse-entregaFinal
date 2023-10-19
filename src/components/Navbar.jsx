@@ -11,17 +11,15 @@ const NavBar = () => {
             <NavLink to="/" className="brand"><img src={logo} width={55} alt="logo" /></NavLink>
             <ul>
                 <li><NavLink to="/skiCategory/mountain">Mountain</NavLink></li>
-                <li><NavLink  to="/skiCategory/race">Race</NavLink ></li>
+                <li><NavLink to="/skiCategory/race">Race</NavLink ></li>
                 <li><NavLink to="/ContactUs">Contact Us</NavLink></li>
             </ul>
             <ul>
-            <li><SignIn Link to="/SingIn" /></li>
-            <li><CartWidget Link to="/Cart" /></li>
+                <li><SignIn Link to="/SingIn" /></li>
+                <li><CartWidget Link to="/Cart" /></li>
             </ul>
-            
         </nav>
     )
 }
-
 
 export default NavBar;

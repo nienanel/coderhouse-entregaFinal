@@ -1,27 +1,36 @@
+import "./ItemListContainer.css";
 import React, { useState } from "react";
-export default function ItemCount({ initialCount, onCountChange }) {
+import { useCart } from "./Cart/CartContext"
+
+export default function ItemCount({ initialCount, onCountChange, item }) {
 
     const [count, setCount] = useState(initialCount);
+    const { addToCart } = useCart();
 
     const handleAdd = () => {
         if (count < 5) {
-            setCount(count + 1);
-            onCountChange(count + 1);
+            const newCount = count + 1;
+            setCount(newCount);
         }
     };
 
     const handleSubtract = () => {
         if (count > 0) {
-            setCount(count - 1);
-            onCountChange(count - 1);
+            const newCount = count - 1;
+            setCount(newCount);
         }
     };
 
+    const handleAddToCart = () => {
+        addToCart(item, count); 
+    };
+
     return (
-        <div className="contador">
-            <button onClick={handleAdd}> + </button>
-            <p>{count}</p>
+        <div className="counter">
             <button onClick={handleSubtract}> - </button>
+            <p>{count}</p>
+            <button onClick={handleAdd}> + </button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
         </div>
     )
 }
